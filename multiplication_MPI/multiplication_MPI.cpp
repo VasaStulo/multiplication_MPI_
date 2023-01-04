@@ -6,15 +6,15 @@
 #include "mpi.h"
 #include <clocale>
 
-////Функция простой инициализации матриц
-//void matrixInitialize(double* pAMatrix, double* pBMatrix, int N) {
-//	int i, j;
-//	for(i=0; i<N; i++)
-//		for (j = 0; j < N; j++) {
-//			pAMatrix[i * N + j] = 1;
-//			pBMatrix[i * N + j] = 1;
-//		}
-//}
+//Функция простой инициализации матриц
+void matrixInitialize(double* pAMatrix, double* pBMatrix, int N) {
+	int i, j;
+	for(i=0; i<N; i++)
+		for (j = 0; j < N; j++) {
+			pAMatrix[i * N + j] = 1;
+			pBMatrix[i * N + j] = 1;
+		}
+}
 
 
 //Функция рандома инициализации матриц
@@ -102,10 +102,6 @@ int main(int argc, char* argv[]) {
 		printMatrix(pAMatrix, N, N);
 		printf("Инициализация матрицы B\n");
 		printMatrix(pBMatrix, N, N);
-		printf("Инициализация матрицы C\n");
-		printMatrix(pCMatrix, N, N);
-		printf("Инициализация итоговой матрицы \n");
-		printMatrix(pCMatrixSum, N, N);
 
 		for (nCounter = 1; nCounter < nCommSize; nCounter++) {
 			MPI_Send(&N, 1, MPI_INT, nCounter, 0, MPI_COMM_WORLD);
