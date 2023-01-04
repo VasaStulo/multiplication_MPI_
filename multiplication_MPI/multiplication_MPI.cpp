@@ -102,6 +102,10 @@ int main(int argc, char* argv[]) {
 		printMatrix(pAMatrix, N, N);
 		printf("Инициализация матрицы B\n");
 		printMatrix(pBMatrix, N, N);
+		printf("Инициализация матрицы C\n");
+		printMatrix(pCMatrix, N, N);
+		printf("Инициализация итоговой матрицы \n");
+		printMatrix(pCMatrixSum, N, N);
 
 		for (nCounter = 1; nCounter < nCommSize; nCounter++) {
 			MPI_Send(&N, 1, MPI_INT, nCounter, 0, MPI_COMM_WORLD);
