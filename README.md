@@ -1,3 +1,3 @@
 # Перемножение матриц с помощью технологии MPI
 
-![MPI](https://user-images.githubusercontent.com/65859649/210653483-1d84e69d-ccd8-4ddf-9714-0835ebbc1d8a.PNG)
+![image](https://user-images.githubusercontent.com/65859649/211198880-ebf26756-f6a1-4d03-a085-d904f328963e.png)
